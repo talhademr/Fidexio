@@ -17,7 +17,7 @@ public class LogoutStepDefs {
 
     @Given("User goes to the login page")
     public void user_goes_to_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("environment"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
     @Given("User logged in with valid credentials")

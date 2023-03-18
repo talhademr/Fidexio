@@ -1,4 +1,4 @@
-@FIDEX10-497
+@FIDEX10-314
 Feature: US-002 Logout Functionality
 
  # User Story : As a user, I should be able to log out.
@@ -7,7 +7,7 @@ Feature: US-002 Logout Functionality
   #   2- The user can not go to the home page again by clicking the step back
   #   button after successfully logged out.
 
-  @
+
   Background: User is on the home page
     Given User goes to the login page
     And User logged in with valid credentials
