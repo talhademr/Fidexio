@@ -53,3 +53,17 @@ Feature: Login Functionality
       When user click "Reset password" link
       Then  User land on reset  password page
 
+      @FIDEX10-410
+  Scenario: User should see the password in bullet signs by default
+    When User enters a password "posmanager"
+    Then User sees the password in bullet sign
+
+      @FIDEX10-411
+  Scenario Outline: ‘Enter’ key of the keyboard is working correctly on the login page
+    When User enters an email "<email>"
+    And User enters a password "<password>"
+    And User presses enter key
+    Then User should be on the homepage
+        Examples:Email and Passwords
+          | email                   | password     |
+          | salesmanager70@info.com | salesmanager |

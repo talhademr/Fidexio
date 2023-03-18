@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -88,6 +89,40 @@ public class LoginStepDefs {
 
              //   BrowserUtils.isAttributePresent(loginPage.email, "required");
              //   BrowserUtils.isAttributePresent(loginPage.password, "required");
+
+
+
     }
+
+    @When("user click {string} link")
+    public void user_click_link(String string) {
+        loginPage.resetBtn.click();
+    }
+    @Then("User land on reset  password page")
+    public void user_land_on_reset_password_page() {
+        Assert.assertTrue(Driver.getDriver().getTitle().contains("Reset password"));
+    }
+
+    @When("User enters a password {string}")
+    public void user_enters_a_password(String password) {
+        loginPage.password.sendKeys(password);
+    }
+
+    @Then("User sees the password in bullet sign")
+    public void user_sees_the_password_in_bullet_sign() {
+        String type = loginPage.password.getAttribute("type");
+        Assert.assertEquals(type, "password");
+    }
+
+    @When("User enters an email {string}")
+    public void userEntersAnEmail(String mail) {
+        loginPage.email.sendKeys(mail);
+    }
+
+    @When("User presses enter key")
+    public void user_presses_enter_key() {
+        loginPage.password.sendKeys(Keys.ENTER);
+    }
+
 
 }
