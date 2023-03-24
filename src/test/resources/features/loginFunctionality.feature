@@ -48,7 +48,8 @@ Feature: Login Functionality
       |                          |            |
       | salesmanager123@info.com |            |
       |                          | posmanager |
-    @FIDEX10-409
+
+  @FIDEX10-409
     Scenario: User land on the ‘reset password’ page after clicking on the "Reset password" link
       When user click "Reset password" link
       Then  User land on reset  password page
