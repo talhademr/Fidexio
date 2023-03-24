@@ -1,4 +1,4 @@
-@FIDEX10-320
+@FIDEX10-320 @regression
 Feature: Login Functionality
 
   Background: Login page

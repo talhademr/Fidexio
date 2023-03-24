@@ -1,4 +1,4 @@
-@FIDEX10-314
+@FIDEX10-314 @regression
 Feature: US-002 Logout Functionality
 
  # User Story : As a user, I should be able to log out.
